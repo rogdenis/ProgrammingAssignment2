@@ -8,14 +8,14 @@
 #cacheSolve(matr)
 #cacheSolve(matr)
 
-#Function takes matrix as an input, but also it has default huge matrix
+#Function takes matrix as an input, but also it has default matrix
 #to see the difference in calculation time of inversed matrix
 
 makeCacheMatrix <- function(x = matrix(rnorm(1024),32,32)) {
   
   inverse <- NULL # set null to inverse first of all
   set <- function(y) {
-    x <<- y ##set the value here
+    x <<- y #set the value here
     inverse <<- NULL
   }
   get <- function() x #function that lets to read the data
@@ -28,7 +28,7 @@ makeCacheMatrix <- function(x = matrix(rnorm(1024),32,32)) {
 }
 
 
-## This function reads the value of inversed matrix of the object given
+# This function reads the value of inversed matrix of the object given
 # if given, calculates inversed matrix one more time
 
 cacheSolve <- function(x, ...) {
